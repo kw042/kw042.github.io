@@ -20,8 +20,17 @@ h1 {
   font-size: 2.5rem;
 }
 
-/* ナビゲーションのスタイル */
 
+html.dark {
+  background-color: #080816;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+/* ナビゲーションのスタイル */
 .nav-links {
   width: 100%;
   top: 5rem;
@@ -38,7 +47,7 @@ h1 {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .nav-links a:hover,
@@ -50,9 +59,8 @@ h1 {
   display: unset;
 }
 
-@media screen and (min-width: 636px) {
+@media screen {
   .nav-links {
-    margin-left: 5em;
     display: block;
     position: static;
     width: auto;
@@ -64,13 +72,4 @@ h1 {
     padding: 15px 20px;
   }
 
-}
-
-html.dark {
-  background-color: #080816;
-  color: #fff;
-}
-
-.dark .nav-links a {
-  color: #fff;
 }

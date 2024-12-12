@@ -3,5 +3,16 @@ import Common from '../layouts/Common.astro'
 ---
 
 <Common title='Home'>
-  <p>hello!</p>
+  <img src='src/data/img/brain.svg' alt='Astro Logo' />
 </Common>
+
+<style>
+  img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+</style>
