@@ -1,0 +1,11 @@
+---
+import Common from '../layouts/Common.astro'
+const allPosts = await Astro.glob('./posts/*.md');
+---
+
+<Common title='Blog'>
+  <p>kakumono</p>
+  <ul>
+    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+  </ul>
+</Common>
