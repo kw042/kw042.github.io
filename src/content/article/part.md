@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: '労働について'
-pubDate: 2024-12-10
+date: 2024-12-10
 description: '労働のこれから'
 author: 'ggme'
 image:

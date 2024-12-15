@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'ごはんについて'
-pubDate: 2024-12-10
+date: 2024-12-10
 description: 'ごはんの探求'
 author: 'ggme'
 slug: "gohan"

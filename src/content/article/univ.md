@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: '大学について'
-pubDate: 2024-12-10
+date: 2024-12-10
 description: 'いまの大学'
 author: 'ggme'
 image:
