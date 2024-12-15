@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Md.astro
+layout: ../../layouts/Post.astro
 title: 'ごはんについて'
 pubDate: 2024-12-10
 description: 'ごはんの探求'

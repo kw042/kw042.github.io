@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Md.astro
+layout: ../../layouts/Post.astro
 title: '労働について'
 pubDate: 2024-12-10
 description: '労働のこれから'

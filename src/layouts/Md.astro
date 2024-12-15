@@ -1,39 +1,33 @@
----
-import Common from '../layouts/Common.astro'
-const { frontmatter } = Astro.props;
----
-<Common title={frontmatter.title}>
-<head>
-    <meta charset="UTF-8" />
-  </head>
-<p>投稿日: {frontmatter.pubDate.toString().slice(0,10)}</p>
-<p>著者: {frontmatter.author}</p>
-
-<div class="tags">
-  {frontmatter.tags.map((tag) => (
-    <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-  ))}
-</div>
-
 <slot />
-</Common>
 
 <style>
-  a {
-    color: #00539F;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
-  }
-</style>
+    h1 {
+      margin-block: 4rem;
+      font-size: 40pt;
+    }
+    h2 {
+      margin-block-start: 1rem;
+    }
+  
+    h3 {
+      margin-block-start: 1rem;
+    }
+  
+    h4 {
+      margin-block-start: 1rem;
+    }
+  
+    h5 {
+      margin-block-start: 1rem;
+    }
+  
+    h6 {
+      margin-block-start: 1rem;
+    }
+  
+    p {
+      line-height: 1.8rem;
+      text-indent: 1rem each-line;
+      margin-block: 0rem;
+    }
+<style/>
