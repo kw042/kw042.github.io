@@ -4,23 +4,59 @@ import { Content as Profile } from "/src/content/about/profile.md";
 ---
 
 <Common title='About'>
+  <div class="icon">
+    <div class="icon-container">
+      <img src="src/data/icon/icon.png" alt="icon" />
+      <span class="icon-text">tanaka</span>
+    </div>
+  </div>
   <div class="profile">
     <Profile />
   </div>
 </Common>
 
 <style>
+  .icon {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-text {
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  }
+  .profile {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+</style>
+
+<style>
+  .icon {
+    text-align: center;
+  }
+  img {
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  }
+
   .profile {
     margin: 0 auto;
     max-width: 800px;
     padding: 0 20px;
   }
 
-  .profile img {
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-    width: 200px;
-    height: 200px;
-  }
 </style>

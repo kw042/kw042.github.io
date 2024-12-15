@@ -11,4 +11,19 @@ tags: ["astro", "note", "blog"]
 ---
 
 ## Profile
-おろろ
+### Name
+- tanaka
+- ggme
+
+### Organization
+- 2023-04 ~ 電気通信大学
+
+### Qualification
+None
+
+## Favorite
+
+### Novel
+- a
+- b
+- c 

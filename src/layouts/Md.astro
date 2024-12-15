@@ -1,33 +1,32 @@
 <slot />
 
-<style>
-    h1 {
-      margin-block: 4rem;
-      font-size: 40pt;
-    }
-    h2 {
-      margin-block-start: 1rem;
-    }
-  
-    h3 {
-      margin-block-start: 1rem;
-    }
-  
-    h4 {
-      margin-block-start: 1rem;
-    }
-  
-    h5 {
-      margin-block-start: 1rem;
-    }
-  
-    h6 {
-      margin-block-start: 1rem;
-    }
-  
-    p {
-      line-height: 1.8rem;
-      text-indent: 1rem each-line;
-      margin-block: 0rem;
-    }
-<style/>
+<style is:global>
+:root {
+  --heading-margin: 1rem;
+  --heading-border-width: 5px;
+  --heading-border-color: rgb(0, 0, 0);
+  --heading-padding: 15px;
+  --paragraph-line-height: 1.8rem;
+  --paragraph-indent: 1rem;
+  --heading-font-size-h1: 40pt;
+  --heading-margin-h1: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-block-start: var(--heading-margin);
+  border-left: var(--heading-border-width) solid var(--heading-border-color);
+  padding-left: var(--heading-padding);
+}
+
+h1 {
+  font-size: var(--heading-font-size-h1);
+  margin-block: var(--heading-margin-h1);
+}
+
+p {
+  line-height: var(--paragraph-line-height);
+  text-indent: var(--paragraph-indent);
+  margin-block: 0;
+}
+
+</style>
