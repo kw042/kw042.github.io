@@ -1,0 +1,12 @@
+---
+import Common from "../../layouts/Common.astro"
+const allPosts = await Astro.glob('/src/content/article/*.md');
+---
+
+<Common>
+    <ul>
+        {allPosts.map((post) => (
+            <li><a href={`/blog/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a></li>
+        ))}
+    </ul>
+</Common>
