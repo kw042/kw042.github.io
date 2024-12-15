@@ -15,7 +15,7 @@ const { frontmatter } = Astro.props;
   <p class="post-date">{new Date(frontmatter.date).toLocaleDateString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '-')}</p>
   <div class="tags">
     {frontmatter.tags.map((tag) => (
-      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+      <p class="tag"><a href={`/blog/category/${tag}`}>{tag}</a></p>
     ))}
   </div>
 

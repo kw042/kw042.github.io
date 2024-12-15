@@ -4,9 +4,50 @@ const allPosts = await Astro.glob('/src/content/article/*.md');
 ---
 
 <Common>
-    <ul>
+    <div class="list">
         {allPosts.map((post) => (
-            <li><a href={`/blog/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a></li>
+            <div class="post-block">
+                <a href={`/blog/posts/${post.frontmatter.slug}`} class="post-title">{post.frontmatter.title}</a>
+                <p class="post-description">{post.frontmatter.description}</p>
+                <div class="post-meta">
+                    <span class="post-date">{new Date(post.frontmatter.date).toLocaleDateString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '-')}</span>
+                </div>
+            </div>
         ))}
-    </ul>
+    </div>
 </Common>
+
+<style>
+    .list {
+        margin-top: 20px;
+    }
+    .post-block {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-top: 1px solid #5f5f5f;
+    }
+    .post-title {
+        font-size: 1.5em;
+        color: #333;
+        text-decoration: none;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+    .post-title:hover {
+        text-decoration: underline;
+    }
+    .post-meta {
+        font-size: 0.9em;
+        color: #666;
+        margin-bottom: 10px;
+    }
+    .post-date {
+        padding-top: 10px;
+    }
+    .post-description {
+        margin-top: 0px;
+        font-size: 1em;
+        color: #555;
+        padding-top: 10px;
+    }
+</style>

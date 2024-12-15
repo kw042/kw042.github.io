@@ -1,9 +1,14 @@
 ---
-import Common from '../../layouts/Common.astro';
-import Post from '../../components/Post.astro';
+import Common from '../../../layouts/Common.astro';
+import Post from '../../../components/Post.astro';
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../posts/*.md');
+  const allPosts = await Astro.glob('/src/content/article/*.md');
+  console.log(allPosts); // デバッグ用ログ出力
+
+  if (allPosts.length === 0) {
+    throw new Error('No posts found');
+  }
 
   const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 
@@ -22,6 +27,6 @@ const { posts } = Astro.props;
 <Common pageTitle={tag}>
   <p>{tag}のタグが付いた記事</p>
   <ul>
-    {posts.map((post) => <Post url={post.url} title={post.frontmatter.title}/>)}
+    {posts.map((post) => <li><a href={`/blog/posts/${post.frontmatter.slug}`}>{post.frontmatter.title}</a></li>)}
   </ul>
 </Common>
