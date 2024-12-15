@@ -7,6 +7,7 @@ author: 'ggme'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'AstroLogo'
+slug: "gohand"
 tags: ["astro", "note"]
 ---
 

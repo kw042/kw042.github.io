@@ -21,9 +21,7 @@ tags: ["astro", "note", "blog"]
 ### Qualification
 None
 
-## Favorite
-
-### Novel
-- a
-- b
-- c 
+## Link
+- [Twitter](https://twitter.com/uectnk) - @uectnk
+- [Bluesky](https://bsky.app/profile/ggme.bsky.social) - @ggme
+- [GitHub](https://github.com/kw042) - @kw042

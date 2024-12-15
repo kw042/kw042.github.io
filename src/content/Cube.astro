@@ -28,12 +28,18 @@
       const material = new THREE.MeshBasicMaterial({ color: 0x000000 });
       const cube = new THREE.Mesh(geometry, material);
       scene.add(cube);
-
+      
       const edgeSize = 2.0; // 辺の大きさ（立方体より少し大きくする）
       const edgeGeometry = new THREE.BoxGeometry(edgeSize, edgeSize, edgeSize);
       const edges = new THREE.EdgesGeometry(edgeGeometry);
       const line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0xffffff }));
       scene.add(line);
+
+      const edgeSize1 = 1.0; // 辺の大きさ（立方体より少し大きくする）
+      const edgeGeometry1 = new THREE.BoxGeometry(edgeSize1, edgeSize1, edgeSize1);
+      const edges1 = new THREE.EdgesGeometry(edgeGeometry1);
+      const line1 = new THREE.LineSegments(edges1, new THREE.LineBasicMaterial({ color: 0xffffff }));
+      scene.add(line1);
 
       // Position the camera
       camera.position.z = 5;
@@ -50,8 +56,10 @@
         requestAnimationFrame(animate);
         cube.rotation.x -= 0.01;
         line.rotation.x += 0.01;
+        line1.rotation.x -=0.01
         cube.rotation.y += 0.01;
         line.rotation.y += 0.01;
+        line1.rotation.y +=0.01
         renderer.render(scene, camera);
       };
       animate();

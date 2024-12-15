@@ -1,0 +1,21 @@
+---
+export async function getStaticPaths() {
+  // 記事ファイルを取得
+  const posts = await Astro.glob('/src/content/article/*.md');
+
+  // 各記事のslugをparamsに設定
+  return posts.map(post => ({
+    params: { article: post.frontmatter.slug }, // slugをパラメータに使用
+    props: { post }, // 記事データをpropsとして渡す
+  }));
+}
+
+// propsから記事データを取得
+const { Content } = Astro.props.post; 
+---
+
+<article>
+  <section>
+    <Content />
+  </section>
+</article>

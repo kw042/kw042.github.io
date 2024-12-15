@@ -4,9 +4,7 @@ title: 'ごはんについて'
 pubDate: 2024-12-10
 description: 'ごはんの探求'
 author: 'ggme'
-image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'AstroLogo'
+slug: "gohan"
 tags: ["astro", "note", "blog"]
 ---
 
